@@ -84,6 +84,7 @@ export default {
         let c = this.a + this.b;
         let left = "transform:translateX(" + c + "px)";
         this.change = left;
+        console.log(this.change)
       }
     },
     rights() {
@@ -95,6 +96,7 @@ export default {
         let c = this.a + this.b;
         let right = "transform:translateX(" + c + "px)";
         this.change = right;
+        console.log(this.change)
       }
     }
   }
@@ -105,7 +107,6 @@ export default {
   margin: 0;
   padding: 0;
 }
-
 .window {
   background-color: white;
   width: 1146px;
@@ -125,12 +126,14 @@ export default {
   width: 40px;
   height: 40px;
   margin-top: 32px;
+  cursor: pointer;
 }
 .right {
   width: 40px;
   height: 40px;
   margin-top: 32px;
   margin-left: 40px;
+  cursor: pointer;
 }
 .img {
   margin-top: 20px;
@@ -142,14 +145,18 @@ export default {
 .img div {
   text-align: left;
   display: inline-block;
+   -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  -webkit-transition-duration:1s;
+  transition-duration: 1s;
 }
 .img1 {
   width: 350px;
   height: 460px;
   margin-right: 12px;
   margin-left: 12px;
+  cursor:pointer;
 }
-
 .title h3 {
   width: 112px;
   font-size: 28px;
